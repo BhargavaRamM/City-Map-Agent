@@ -260,7 +260,7 @@
   ; update the properties of node n and, if necessary, its position
   ;  on open list
   ; return the adjusted open-closed list
-; YOU MUST WRITE THIS FUNCTION
+
 
  (cond ((null n) ())
        ((> (least-cost n cost-of-short-path) (get (caar open-close) 'least-cost-estimate) (append (list (caar open-close)) (update-node-openn parent successor-fn cost-of-short-pat
@@ -288,7 +288,7 @@ h action (cdar open-close)))))
   ; update the properties of node n and, if necessary, its
   ;   descendants on open and closed lists.
   ; return the adjusted open-closed list
-; YOU MUST WRITE THIS FUNCTION
+
 ;(defun update-close-node-properties (n parent successor-fn cost-of-short-path action open-closed)
 ;  (cond ((< cost-of-short-path (get n 'best-path-cost)) (setf (get n 'parent) parent) (setf (get n 'action) action) (setf (get n 'best-path-cost) cost-of-short-path))))
 ;(defun update-successors ( n parent successor-fn cost-of-short-path action open-closed)
@@ -325,7 +325,7 @@ h action (cdar open-close)))))
 ;   coordinates of the point represented by the state
 ; lst is an open or closed list
 ; return true if a node on lst has this point as its state
-; YOU MUST WRITE THIS FUNCTION
+
 ;(defun state-on (state lst)
   (cond ((null lst) NIL)
         ((not(and (= (car state) (caar lst)) (= (cadr state) (cadar lst)))) (state-on state (cdr lst)))
